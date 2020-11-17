@@ -1,0 +1,23 @@
+<div align =" center" >
+    <h2> Add Employee</h2>
+    <form  [formGroup]="formdata" (ngSubmit) ="onClickSubmit(formdata.value)">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type ="text" formControlName ="name"></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type ="text" formControlName ="salary"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type ="text" formControlName ="age"></td>
+            </tr>
+            <tr align = "center">
+                <td colspan ="2"><input type ="submit" value ="Center"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<h2>{{msg}}</h2>

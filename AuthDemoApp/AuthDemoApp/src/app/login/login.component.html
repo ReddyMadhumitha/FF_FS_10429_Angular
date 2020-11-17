@@ -1,0 +1,24 @@
+<div align="center">
+    <h1>Welcome To AuthDemoApp Login Page</h1>
+        <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+        
+        <table border=1>
+           <tr>
+                <td>Email Id</td>
+                <td><input type="text" name="email id" placeholder="email id" formControlName="email id"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" placeholder="password" formControlName="password"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="login">
+                </td>
+        </tr>
+     
+    
+            </table>
+     
+       
+    </form>
