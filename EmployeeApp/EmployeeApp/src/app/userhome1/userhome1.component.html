@@ -1,0 +1,25 @@
+<h3>Users Data</h3>
+<table border="1">
+    
+        <tr>
+            <td>name</td>
+            <td>salary</td>
+            <td>age</td>
+            <td>Action</td>
+        </tr>
+        <tbody>
+            <tr *ngFor="let item of persondata[1]; let i=index">
+                <td>{​​​​​​​​{​​​​​​​​item.employee_name}​​​​​​​​}​​​​​​​​</td>
+                <td>{​​​​​​​​{​​​​​​​​item.employee_salary}​​​​​​​​}​​​​​​​​</td>
+                <td>{​​​​​​​​{​​​​​​​​item.employee_age}​​​​​​​​}​​​​​​​​</td>
+                <td>
+                    <input type="button"value="Edit"(click)="editData(i)"> |
+                        <input type="button"value="Delete"(click)="deleteData(i)">
+                </td>
+                <!-- <td><a href = ""(click)="editData(i)">Edit</a> | <a href = ""(click)="deleteData(i)">Delete</a></td> -->
+                </tr>
+        </tbody>
+        </table>
+        <nav>
+            <arouterLink=" /welcome">add Employee</a>
+        </nav>

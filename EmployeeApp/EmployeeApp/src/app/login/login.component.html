@@ -1,6 +1,6 @@
 <div align =" center" >
     <h2> Login Page</h2>
-    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+    <form [formGroup]="formdata" (ngSubmit)="onFormSubmit(formdata.value)">
         <table>
             <tr>
                 <td> User Name</td>
@@ -17,3 +17,4 @@
         </table>
     </form>
 </div>
+<router-outlet></router-outlet>

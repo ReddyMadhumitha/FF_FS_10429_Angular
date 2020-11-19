@@ -1,9 +1,8 @@
-import { Component, OnInit ,ChangeDetectorRef,NgZone} from '@angular/core';
+import { Component, OnInit ,ChangeDetectorRef} from '@angular/core';
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
-import { UserhomeComponent } from '../userhome/userhome.component';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormControl, Validators,FormGroupName } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-welcome',
@@ -13,16 +12,22 @@ import { FormGroup, FormControl, Validators,FormGroupName } from '@angular/forms
 export class WelcomeComponent implements OnInit {
 static msg:string;
   ngZone: any;
+  formdata;
   constructor(private service :UserService,private ref: ChangeDetectorRef,private http: HttpClient) {
     ref.detach();
     setInterval(()=> {this.ref.detectChanges(); },500);
    }
 
   ngOnInit(): void {
-    this.service.receivedFilter.subscribe((param: string) => {
+    this.service.recievedFilter.subscribe((param: string) => {
       this.ngZone.run(() =>{ WelcomeComponent.msg = param;})
     
    
+    });
+    this.formdata=new FormGroup({
+      name:new FormControl("", Validators.compose([Validators.required])),
+      salary:new FormControl("", Validators.compose([Validators.required])),
+      age:new FormControl("", Validators.compose([Validators.required])),
     });
     
     }

@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserhomeComponent } from './userhome/userhome.component';
+import { Userhome1Component } from './userhome1/userhome1.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  declarations: [ 
+    AppComponent,  
     RegistrationComponent,
-    UserhomeComponent,
+    Userhome1Component,
     WelcomeComponent,
     LoginComponent
   ],
@@ -22,6 +23,10 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
+  ],
+  exports: [
+    Userhome1Component
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,68 @@
+<h1>Welcome To Employee Registration</h1>
+<form [formGroup]= "formdata" (ngSubmit)="onFormSubmit(formdata.value)">
+    <div align="center">
+        <table border=1>
+            <tr>
+                <td>Sap Code</td>
+                <td><input type="text" name="sapcode" placeholder="sapcode" formControlName="sapcode"></td>
+            </tr>
+            <tr>
+                <td>FullName</td>
+                <td><input type="text" name="fullname" placeholder="fullname" formControlName="fullname"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" placeholder="password" formControlName="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="confirmpassword" placeholder="confirmpassword"
+                        formControlName="confirmpassword"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="number" name="age" placeholder="age" formControlName="age"></td>
+            </tr>
+            <tr>
+                <td>DateOfJoining</td>
+                <td>
+                    <input type="number" name="dateofjoining" placeholder="dateofjoining"
+                        formControlName="dateofjoining">
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>
+                    <input type="number" name="salary" placeholder="salary" formControlName="salary">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male" placeholder="gender" formControlName="gender"> Male
+                    <input type="radio" name="gender" value="female" placeholder="gender" formControlName="gender">
+                    Female
+                </td>
+            </tr>
+            <tr>
+                <td>Skill Sets</td>
+ 
+                <input type="checkbox" name="Skill Sets" value="Java" placeholder="skillsets"
+                    formControlName="skillsets"> Java
+                <input type="checkbox" name="Skill Sets" value="Spring" placeholder="skillsets"
+                    formControlName="skillsets"> Spring
+                <input type="checkbox" name="Skill Sets" value=".NET" placeholder="skillsets"
+                    formControlName="skillsets"> .NET
+                <input type="checkbox" name="Skill Sets" value="ECM" placeholder="skillsets"
+                    formControlName="skillsets"> ECM
+            </tr>
+ 
+            <td>
+                <input type="submit" value="register">
+            </td>
+            <a routerLink="/userhome">
+                Userhome</a>
+ 
+        </table>
+    </div>
+    </form>

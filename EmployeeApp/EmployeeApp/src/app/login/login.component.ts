@@ -9,18 +9,18 @@ import { FormGroup, FormControl, Validators,FormGroupName } from '@angular/forms
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
-formData;
+constructor(private router:Router) { }
+formdata;
   ngOnInit(): void {
-    this.formData=new FormGroup({
-      name:new FormControl(""),
-      salary:new FormControl(""),
+    this.formdata=new FormGroup({
+      username:new FormControl(""),
+      password:new FormControl(""),
   })
 
 }
-onClickSubmit(data){
+onFormSubmit(data){
   if(data.username ="Madhu" && data.password == "12345"){
-  alert("you are succesfully logged in");
+      alert("you are succesfully logged in");
   this.router.navigate(["userhome"]);
 }
 else {

@@ -1,5 +1,5 @@
 <h1>Welcome To Student Registration</h1>
-<form [formGroup]= "formdata" (ngSubmit)= "onClickSubmit(formdata.value)">
+<form [formGroup]= "formdata" (ngSubmit)="onClickSubmit(formdata.value)">
     <div align="center">
         <table border=1>
            
@@ -44,8 +44,7 @@
                     <input type="radio" name="gender" value="male" placeholder="gender" formControlName="gender"> Male
               
                 
-                    <input type="radio" name="gender" value="female" placeholder="gender" formControlName="gender">
-                    Female
+                    <input type="radio" name="gender" value="female" placeholder="gender" formControlName="gender"> Female
                 </td>
 
             </tr>
@@ -61,10 +60,11 @@
                 <td>
                     <input type="submit" [disabled]="!formdata.valid" class="forsubmit" value="register">
                 </td>
-            <a routerLink="/userhome">
+            <a routerLink="/userhome1">
                     Userhome</a>
                    
                    
         </table>
     </div> 
 </form>
+<router-outlet></router-outlet>

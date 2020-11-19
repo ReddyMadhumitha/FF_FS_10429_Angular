@@ -12,8 +12,9 @@ export class AppComponent implements OnInit {
   title = 'HTTPDemoApp';
   msg="";
   public persondata = []; 
+  formdata;
   constructor(private userservice: UserService,private http: HttpClient) { }
-  onClickSubmit(data)
+  onFormSubmit(data)
   {
     var formData : any = new FormData();
     formData.append("name",data.name);
@@ -38,6 +39,11 @@ ngOnInit() {
      this.persondata = Array.from(Object.keys(data), k=>data[k]);
      console.log(this.persondata);
   });
+  this.formdata=new FormGroup({
+    name:new FormControl(""),
+    salary:new FormControl(""),
+    age:new FormControl("")
+})
 }
 
 }
